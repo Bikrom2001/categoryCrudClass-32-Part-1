@@ -36,7 +36,8 @@ class CategoryController extends Controller
 
     {
         
-       return $category = Category::where("id",$id)->first();
+    //    return $category = Category::where("id",$id)->first();
+       return $category = Category::findOrFail($id);
         // $category->delete();
 
         // return to_route('category.list')->with('success', 'Category deleted successfully.');
