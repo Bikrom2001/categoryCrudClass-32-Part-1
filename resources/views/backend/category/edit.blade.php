@@ -14,7 +14,7 @@
     <div class="container py-5">
         <h2>Category Edit</h2>
 
-        <form action='{{ route('category.store') }}' method='POST'>
+        <form action='{{ route('category.update', $category->id) }}' method='POST'>
             @csrf
             <div class="mb-3">
                 <label for="category" class="form-label">Category Name</label>
