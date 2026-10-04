@@ -31,3 +31,5 @@
 
 
 {{-- amra categoryController theke validation part alada korbo . tar joono amader ai command ta install korte hoybe "php artisan make:request CategoryStoreRequest and php artisan make:request CategoryUpdateRequest" --}}
+
+{{-- amader user anek somoy from theke data hariye jay seta neoya jonno "Repopulating Forms" --}}
