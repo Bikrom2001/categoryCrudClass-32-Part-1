@@ -12,19 +12,19 @@
 <body>
 
     <div class="container py-5">
-        <h2>Category Create</h2>
+        <h2>Category Edit</h2>
 
         <form action='{{ route('category.store') }}' method='POST'>
             @csrf
             <div class="mb-3">
                 <label for="category" class="form-label">Category Name</label>
-                <input type="text" name='name' value="{{ old('name') }}" class="form-control" id="category">
+                <input type="text" name='name' value="{{ $category->name ?? old('name') }}" class="form-control" id="category">
             </div>
             @error('name')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Update Category</button>
         </form>
     </div>
 
