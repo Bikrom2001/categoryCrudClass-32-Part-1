@@ -36,8 +36,8 @@
                       <td>{{ $category->name }}</td>
                       <td>{{ $category->slug }}</td>
                       <td>
-                        <a href="">Edit</a>
-                        <a href="">Delete</a>
+                        <a class="btn btn-sm btn-primary" href="">Edit</a>
+                        <a href="{{ route('category.delete', $category->id) }}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this category?')">Delete</a>
                       </td>
                     </tr>
                 @empty

@@ -31,4 +31,14 @@ class CategoryController extends Controller
 
         return to_route('category.list')->with('success', 'Category created successfully.');
     }
+
+    public function delete($id)
+
+    {
+        
+       return $category = Category::where("id",$id)->first();
+        // $category->delete();
+
+        // return to_route('category.list')->with('success', 'Category deleted successfully.');
+    }
 }
