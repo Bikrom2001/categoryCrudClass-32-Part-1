@@ -30,9 +30,9 @@
                 </tr>
             </thead>
             <tbody>
-                @forelse ($categories as $category)
+                @forelse ($categories as $key => $category)
                     <tr>
-                      <td>{{ $category->id }}</td>
+                      <td>{{ $key + 1 }}</td>
                       <td>{{ $category->name }}</td>
                       <td>{{ $category->slug }}</td>
                       <td>
