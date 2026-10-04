@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CategoryStoreRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -19,11 +20,9 @@ class CategoryController extends Controller
         return view('backend.category.create');
     }
 
-    public function store(Request $request)
+    public function store(CategoryStoreRequest $request)
     {
-        $request->validate([
-            "category" => "required"
-        ]);
+        
 
         $category = new Category();
         $category->name = $request->category;
