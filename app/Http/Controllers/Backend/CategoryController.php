@@ -32,6 +32,12 @@ class CategoryController extends Controller
         return to_route('category.list')->with('success', 'Category created successfully.');
     }
 
+    public function edit($id)
+    {
+        return $category = Category::findOrFail($id);
+        return view('backend.category.edit', compact('category'));
+    }
+
     public function delete($id)
 
     {
