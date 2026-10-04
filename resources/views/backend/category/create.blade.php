@@ -18,9 +18,9 @@
             @csrf
             <div class="mb-3">
                 <label for="category" class="form-label">Category Name</label>
-                <input type="text" name='category' class="form-control" id="category">
+                <input type="text" name='name' class="form-control" id="category">
             </div>
-            @error('category')
+            @error('name')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
 

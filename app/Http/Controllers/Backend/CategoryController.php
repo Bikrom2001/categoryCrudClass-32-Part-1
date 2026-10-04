@@ -25,8 +25,8 @@ class CategoryController extends Controller
         
 
         $category = new Category();
-        $category->name = $request->category;
-        $category->slug = Str::slug($request->category);
+        $category->name = $request->name;
+        $category->slug = Str::slug($request->name);
         $category->save();
 
         return to_route('category.list')->with('success', 'Category created successfully.');
